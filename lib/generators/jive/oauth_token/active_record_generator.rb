@@ -5,7 +5,7 @@ require "rails/generators/active_record"
 
 # Extend the HasDynamicColumnsGenerator so that it creates an AR migration
 module Jive
-	module OauthToken
+	class OauthToken < ActiveRecord::Base
 		class ActiveRecordGenerator < ::Jive::OauthToken::Generator
 			include Rails::Generators::Migration
 			extend NextMigrationVersion

@@ -4,11 +4,14 @@ require "active_record"
 
 require "jive/oauth_token/version"
 require "jive/oauth_token/compatibility"
-require "jive/oauth_token/model"
 
+require "jive/oauth_token/class_methods"
+require "jive/oauth_token/instance_methods"
 
 module Jive
-  module OauthToken
-    # Your code goes here...
-  end
+	class OauthToken < ActiveRecord::Base
+	end
 end
+
+Jive::OauthToken.send :include, Jive::OauthToken::InstanceMethods
+Jive::OauthToken.send :extend, Jive::OauthToken::ClassMethods

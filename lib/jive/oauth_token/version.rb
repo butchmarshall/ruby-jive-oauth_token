@@ -1,5 +1,7 @@
+require "active_record"
+
 module Jive
-  module OauthToken
-    VERSION = "0.0.2"
-  end
+	class OauthToken < ActiveRecord::Base
+		VERSION = "0.0.3"
+	end
 end

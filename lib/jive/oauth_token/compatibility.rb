@@ -1,7 +1,7 @@
 require 'jive/oauth_token/version'
 
 module Jive
-	module OauthToken
+	class OauthToken < ActiveRecord::Base
 		module Compatibility
 			if ActiveSupport::VERSION::MAJOR >= 4
 				require 'active_support/proxy_object'

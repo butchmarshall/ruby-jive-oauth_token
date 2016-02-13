@@ -1,5 +1,5 @@
 module Jive
-	module OauthToken
+	class OauthToken < ActiveRecord::Base
 		module NextMigrationVersion
 			# while methods have moved around this has been the implementation
 			# since ActiveRecord 3.0
