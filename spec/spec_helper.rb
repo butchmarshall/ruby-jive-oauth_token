@@ -33,8 +33,10 @@ end
 ActiveRecord::Migration.verbose = false
 
 require "generators/jive/oauth_token/templates/migration_0.1.0"
+require "generators/jive/add_on/templates/migration_0.1.0"
 
 ActiveRecord::Schema.define do
+	AddJiveAddOns010Migration.up
 	AddJiveOauthTokens010Migration.up
 end
 

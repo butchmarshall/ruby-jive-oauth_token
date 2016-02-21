@@ -1,6 +1,8 @@
 class AddJiveOauthTokens010Migration < ActiveRecord::Migration
 	def self.up
 		create_table :jive_oauth_tokens do |t|
+			t.integer :jive_add_on_id
+
 			t.integer :owner_id
 			t.string :owner_type
 
